@@ -1,0 +1,70 @@
+/* Style Sheet*/
+h1{
+    margin: auto;
+    text-align: center;
+}
+
+
+
+.input{
+    margin: auto;
+    padding: 15px;
+    text-align: center;
+}
+
+.hidden{
+    visibility: hidden;
+    display: none;
+}
+#box {
+    display: inline-block;
+    margin: auto;
+    text-align: center;
+}
+
+#boxContainer{
+    border-style: solid;
+   border: solid 5px;
+   display: inline-block;
+   text-align: center;
+   margin-right: auto;
+   margin-left: auto;
+   padding: 10px;
+}
+
+/*Part 2*/
+/*TODO: rename*/
+#boxes{
+width: 500px;
+}
+
+.box{
+    display: block-inline;
+    border: 5px solid black;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+}
+
+.box:hover{
+    border: 5px solid dodgerblue;
+}
+
+.selected{
+    border: 5px solid dodgerblue;
+    background-color: dodgerblue !important;
+}
+
+#box1{
+    background-color: lightgreen;
+}
+
+#box2{
+    background-color: firebrick;
+}
+#box3{
+    background-color: salmon;
+}
+#box4{
+    background-color: rebeccapurple;
+}
