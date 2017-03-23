@@ -1,11 +1,26 @@
-//TypeScript file!
+//Script file!
 $('document').ready(function(){
-	let model = new box();
+	let model = new InputBox();
+	let boxStack= new Array<box>();
+	for(let i=0; i<4; i++){
+		boxStack.push(new box(i));
+	}
 })
 
+
 class box{
+	selected = false;
+	//Pass in the id of the box
+	constructor(id: number){
+		console.log("in box constructor");
+		document.getElementById("boxes").innerHTML += "<div id='box" + id + "' class='box'></div>";
+		//$('#boxes').innerHtml += "<div id='box" + id + "' class='box'></div>";
+	}
+}
+
+class InputBox{
 	things: string[];
-	reps: number;
+	reps = 1; //Start at 1
 	constructor(){
 		this.addEventHandlers();
 	}
@@ -17,6 +32,7 @@ class box{
         //Updates the current text input of the box upon click
         $('#boxSubmit').click(function () {
             let newInput = " " + $('#addToBox').val();
+			console.log(newInput)
             let currentInput = "" + $('#box').text();
             for(let i=0; i < obj.reps; i++)
 			    currentInput = currentInput + newInput;
